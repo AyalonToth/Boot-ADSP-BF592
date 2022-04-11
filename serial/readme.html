@@ -1,0 +1,78 @@
+
+<html>
+	<head>
+		<title>readme</title>
+		<style type="text/css">
+			body { padding:20px;font:14px Arial, Helvetica, Verdana; }
+			pre { border:1px solid gray;padding:10px;background-color:#f0f0f0; }
+			td { padding:5px; }
+			td.heading { background-color:#f0f0f0;border:1px solid #d0d0d0; padding:5px;}
+			h1 { color:#003366; width:100%; border-bottom:1px solid #003366; margin-top:40px; margin-bottom:40px }
+			h2 { color:#000000; border:0px; }
+			li { padding:3px; }
+			#header { background-color:#003366; width:100% }
+		</style>
+	</head>
+	<body>
+	
+		<div id="header">&nbsp;</div>
+
+		<h1>M25P16 device programmer interface app (DPIA)</h1>
+
+		<p>
+		<ol>
+			<li><a href="#OV">Overview </a></li>
+			<li><a href="#SC">Software configuration </a></li>
+			<li><a href="#HC">Hardware requirements and setup </a></li>
+			<li><a href="#OD">Operation Description</a></li>
+		</ol>
+		</p>
+
+		<h1>1. <a name="OV">Overview </a></h1>
+
+			<p>
+				The device programmer interface application (DPIA) implements the interface
+				between the CrossCore Embedded Studio Device Programmer utility and the 
+				on-board device.
+			</p>
+
+			
+		<h1>2. <a name="SC"> Software configuration </a></h1>
+		
+					
+		<h1>3. <a name="HC">Hardware Requirements and Setup </a></h1>
+
+			<h2>3.1 Supported platforms </h2>
+				
+				<ol>
+					<li>ADSP-BF592 EZ-KIT Lite rev 0.1 or higher </li>
+				</ol>
+
+			<h2>3.2 Hardware Setup </h2>
+
+			The following switch and jumper settings should be used for this example.<br><br>
+			
+					<table border="1">
+						<tr>
+							<td class="heading" colspan="2"><b>ADSP-BF592 EZ-KIT Lite rev 0.1</b></td>
+						</tr>
+						<tr><th><b>Jumpers</b></th><th></th></tr>
+						<tr><td>JP2</td><td>installed</td></tr>
+					</table>
+
+		<h1>4.<a name="OD"> Operation Description</a></h1>
+		
+			<li>A pre-built dpia already exists in the same location as this readme.  Otherwise, start CCES and using the Example Browser select the M25P16 DPIA.</li>
+			<li>Build the project to create the executable that will be used by the command line device programmer(CLDP.exe).</li>
+			<li>Now the CLDP along with the DPIA can be used to communicate with the flash device.</li>
+			<li>Please refer to the CLDP help for more information on how to use the program.</li>
+			<li>Note, there are many options when using the CLDP (including defining your connection type, driver file, loader file, etc).
+				Here is a sample command line to program a loader file to the serial flash on the EZ-Kit using an HPUSB-ICE emulator:</li>
+			<BR>
+			<em>cldp -proc ADSP-BF592 -emu hpusb -driver "C:\BF592_EZ-Kit\Examples\Device_Programmer\serial\bf592_m25p16_dpia.dxe" -cmd prog -erase affected -format hex -file "C:\BF592_EZ-Kit\Examples\bf592_example.ldr"</em>
+			<BR>
+
+		
+	</body>
+</html>
+
