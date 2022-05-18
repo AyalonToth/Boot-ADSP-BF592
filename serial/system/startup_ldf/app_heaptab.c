@@ -1,8 +1,8 @@
 /*
-** ADSP-BF592-A user heap source file generated on Sep 10, 2012 at 09:47:46.
+** ADSP-BF592-A user heap source file generated on Apr 11, 2022 at 11:51:48.
 */
 /*
-** Copyright (C) 2000-2012 Analog Devices Inc., All Rights Reserved.
+** Copyright (C) 2000-2021 Analog Devices Inc., All Rights Reserved.
 **
 ** This file is generated automatically based upon the options selected
 ** in the System Configuration utility. Changes to the Heap configuration
@@ -10,12 +10,12 @@
 ** this file. To access the System Configuration utility, double-click the
 ** system.svc file from a navigation view.
 **
-** Custom additions can be inserted within the user-modifiable sections,
-** these are bounded by comments that start with "$VDSG". Only changes
+** Custom additions can be inserted within the user-modifiable sections. These
+** sections are bounded by comments that start with "$VDSG". Only changes
 ** placed within these sections are preserved when this file is re-generated.
 **
-** Product      : CrossCore Embedded Studio 1.0.1.0
-** Tool Version : 6.0.2.28
+** Product      : CrossCore Embedded Studio
+** Tool Version : 6.2.2.7
 */
 
 #ifdef _MISRA_RULES
@@ -32,8 +32,8 @@
 #endif /* _MISRA_RULES */
 
 
-extern "asm" int ldf_heap_space;
-extern "asm" int ldf_heap_length;
+extern "asm" unsigned long ldf_heap_space;
+extern "asm" unsigned long ldf_heap_length;
 
 struct heap_table_t
 {

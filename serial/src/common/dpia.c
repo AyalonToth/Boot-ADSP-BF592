@@ -155,11 +155,11 @@ int main(void)
 	if (flash_info->modes & (QUAD_INPUT | QUAD_OUTPUT | QUAD_IO))
 		flash_enable_quad_mode(flash_info);
 
-	/* get flash manufacturer & device codes, title & desc */
+	/* get flash manufacturer & device codes, title & desc
 	if( AFP_Error == NO_ERR )
 	{
 		AFP_Error = GetFlashInfo();
-	}
+	}*/
 
 	/* get the number of sectors for this device */
 	if( AFP_Error == NO_ERR )

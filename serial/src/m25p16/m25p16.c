@@ -23,7 +23,7 @@
 #define STATUS_WEL					0x02
 
 
-#define NUM_SECTORS 32
+#define NUM_SECTORS 256 // pagina 11
 #define SECTOR_SIZE 0x10000
 
 
@@ -32,7 +32,7 @@ static int m25p16_write_status(const struct flash_info *fi, uint8_t status, uint
 
 static int m25p16_open(struct flash_info *fi)
 {
-	fi->size = 0x200000;
+	fi->size = 0x1000000;
 	fi->number_of_regions = 1;
 	fi->erase_block_regions = malloc(fi->number_of_regions * sizeof (struct erase_block_region));
 
@@ -325,8 +325,8 @@ struct flash_info m25p16_info =
 	/* device ID.  M25P16's DID is 16-bit and is "memory type ID, capacity Id".
 	 * so we just check them instead of device ID.  */
 	0xff,
-	0x20,		/* memory type ID */
-	0x15,		/* capacity ID */
+	0xBA,		/* memory type ID */
+	0x18,		/* capacity ID */
 	STANDARD,	/* supported modes */
 
 	/* The following three fields are better be

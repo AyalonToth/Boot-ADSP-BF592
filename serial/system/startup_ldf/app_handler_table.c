@@ -1,8 +1,8 @@
 
 /*
-** app_handler_table.c generated on September 10, 2012 at 09:47:47.
+** app_handler_table.c generated on Abril 11, 2022 at 11:51:48.
 **
-** Copyright (C) 2000-2012 Analog Devices Inc., All Rights Reserved.
+** Copyright (C) 2000-2022 Analog Devices Inc., All Rights Reserved.
 **
 ** This file is generated automatically based upon the options selected in the
 ** Startup Code/LDF Configuration Editor. Changes to the Interrupt Handler
@@ -42,9 +42,7 @@
 #define INTERRUPT_TABLE_SIZE (96u)
 
 #pragma section(__INT_SECTION__)
-adi_dispatched_data_t adi_dispatched_int_vector_table[INTERRUPT_TABLE_SIZE] = {
-	{ adi_no_dispatched_handler, NULL }
-};
+adi_dispatched_data_t adi_dispatched_int_vector_table[INTERRUPT_TABLE_SIZE];
 
 #pragma section(__INT_SECTION__)
 ADI_OSAL_HANDLER_PTR _adi_osal_gHandlerTable[INTERRUPT_TABLE_SIZE];
